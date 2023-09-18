@@ -1,0 +1,31 @@
+#A1
+#a) 
+SELECT first_name from actor WHERE actor_id = (SELECT actor_id where last_name = 'BOLGER');
+
+#b)
+SELECT a.first_name, a.last_name from actor a, customer c WHERE (a.first_name = c.first_name);
+
+#c)
+SELECT f.title from film f WHERE EXISTS (SELECT language_id FROM `language` l WHERE l.language_id = f.language_id AND l.name='German');
+
+#d)
+SELECT DISTINCT first_name From actor;
+
+#e)
+SELECT l.name, f.title from film f Join `language` l on (l.language_id = f.language_id);
+
+#f)
+SELECT c.first_name, p.amount from customer c left Join payment p on (c.customer_id  = p.customer_id and p.amount > 4);
+
+#g)
+SELECT MAX(p.amount) from payment p;
+
+#h)
+SELECT COUNT(film_id), rating  from film GROUP BY rating;
+
+#A2
+SELECT first_name, last_name FROM actor WHERE (first_name = "ED");
+
+CREATE VIEW eds AS SELECT first_name, last_name FROM actor WHERE (first_name = "ED");
+
+SELECT * FROM eds;
