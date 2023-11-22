@@ -1,0 +1,5 @@
+Ultilizando o limit e exibindo apenas os 100 primeiros registros os dados foram recuperados em 2 ms
+Sem ultilizar o limit a demora foi de 334 ms e foram exibidos mais de 100.000 registros uma quantidade que muitas vezes pode ser desnessesaria e compromete o tempo de execução
+
+Ultilizando where para fazer uma consulta os dados foram recuperados em 92ms
+Substituindo por Inner Join foram recuperados em 90ms uma melhora não muito significativa
