@@ -1,0 +1,2 @@
+CREATE TABLE empresas_acima_media AS
+SELECT * FROM companies_sorted WHERE `total employee estimate` > (SELECT AVG(`total employee estimate`) FROM companies_sorted);
